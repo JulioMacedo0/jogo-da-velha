@@ -17,9 +17,11 @@ function win() {
     if (turn == 1) {
         console.log('O Player X venceu!')
         gameOver = true
+        Button()
     } else if (turn == 0) {
         console.log('O player O venceu!')
         gameOver = true
+        Button()
     }
 }
 
@@ -79,11 +81,12 @@ if(!gameOver){
     } else { console.log("Você já marcou este campo!.") }
     if (x.length + o.length == 9) {
         console.log('DEU VELHA!')
-        // Reset()
+        Button()
     }
 }
 }
 function Reset() {
+    document.getElementById("Buttom").style.display = 'none'
     turn = 0
     gameOver = false
     x = []
@@ -100,4 +103,8 @@ function Reset() {
 
 }
 
+function Button() {
+document.getElementById("Buttom").style.display = 'block'
+  
+}
 
