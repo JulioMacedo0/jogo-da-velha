@@ -8,11 +8,16 @@
     <link rel="stylesheet" href="style.css">
     <script src="game.js"></script>
     <title>Jogo da velha</title>
-    
+
 </head>
 
 <body>
+    <div class="divPlayer"><span id="player1"></span> <span id="xPoints"></span></div>
+    <div class="divPlayer right"><span id="player2"></span><span id="yPoints"></span></div>
+
+
     <div class="containerDiv">
+
         <div id="1" onclick="InsertImage(this.id)"></div>
         <div id="2" onclick="InsertImage(this.id)"></div>
         <div id="3" onclick="InsertImage(this.id)"></div>
@@ -23,6 +28,7 @@
         <div id="8" onclick="InsertImage(this.id)"></div>
         <div id="9" onclick="InsertImage(this.id)"></div>
         <button class="Buttom" id="Buttom" type="submit" onclick="Reset()">Jogar Novamente</button>
+
     </div>
 
 </body>
