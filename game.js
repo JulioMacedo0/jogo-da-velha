@@ -16,10 +16,14 @@ let game = [
 ]
 
  function playerName(player1, player2) {
-   let playerOne = prompt("please enter the name of the player 1")
-   let playerTwo = prompt("please enter the name of the player 2")
+    let playerOne = prompt("please enter the name of the player 1")
+    let playerTwo = prompt("please enter the name of the player 2")
     document.getElementById(player1).innerHTML = playerOne
     document.getElementById(player2).innerHTML = playerTwo
+    if(gameOver){
+        resetPoints()
+        Reset()
+    }
 } setTimeout( () => playerName('player1', 'player2'), 100 )
 
 function win() {
@@ -98,6 +102,8 @@ function InsertImage(id) {
 }
 function Reset() {
     document.getElementById("Buttom").style.display = 'none'
+    document.getElementById("ButtomReset").style.display = 'none'
+    document.getElementById("ButtomPlayer").style.display = 'none'
     turn = 0
     gameOver = false
     x = []
@@ -116,7 +122,8 @@ function Reset() {
 
 function Button() {
     document.getElementById("Buttom").style.display = 'block'
-
+    document.getElementById("ButtomReset").style.display = 'block'
+    document.getElementById("ButtomPlayer").style.display = 'block'
 }
 
 function addPoints(span) {
@@ -127,4 +134,12 @@ function addPoints(span) {
         yPoints++
         document.getElementById(span).innerHTML = yPoints
     }
+}
+
+function resetPoints() {
+    xPoints = 0
+    yPoints = 0
+    document.getElementById('xPoints').innerHTML =  xPoints 
+    document.getElementById('yPoints').innerHTML =  yPoints
+    
 }

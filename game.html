@@ -13,7 +13,7 @@
 
 <body>
     <div class="divPlayer"><span id="player1"></span> <span id="xPoints"></span></div>
-    <div class="divPlayer right"><span id="player2"></span><span id="yPoints"></span></div>
+    <div class="divPlayer right"><span id="player2"></span> <span id="yPoints"></span></div>
 
 
     <div class="containerDiv">
@@ -27,7 +27,9 @@
         <div id="7" onclick="InsertImage(this.id)"></div>
         <div id="8" onclick="InsertImage(this.id)"></div>
         <div id="9" onclick="InsertImage(this.id)"></div>
-        <button class="Buttom" id="Buttom" type="submit" onclick="Reset()">Jogar Novamente</button>
+        <button  id="ButtomPlayer" type="submit" onclick="playerName('player1', 'player2')">Change Players</button>
+        <button class="Buttom" id="Buttom" type="submit" onclick="Reset()">Play Again</button>
+        <button  id="ButtomReset" type="submit" onclick="resetPoints()">Reset Points</button>
 
     </div>
 

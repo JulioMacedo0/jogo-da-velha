@@ -48,3 +48,9 @@ body {
     grid-column: 2;
     display    : none;
 }
+#ButtomReset {
+    display    : none;
+}
+#ButtomPlayer {
+    display    : none;
+}
